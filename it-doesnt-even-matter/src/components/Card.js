@@ -1,12 +1,12 @@
 import React from "react";
 
 
-function Card({pokemon})
+function Card({})
 {
-    console.log(pokemon)
+    // console.log(pokemon)
     return (
             <div className="card">
-                <h1>Pokemon name: {pokemon.name}</h1>
+                Body
             </div>
         )
 }

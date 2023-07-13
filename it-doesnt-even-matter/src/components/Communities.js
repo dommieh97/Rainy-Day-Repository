@@ -7,26 +7,38 @@ function Communities()
     return (
         <>
         <div>
-        {/* <Stack gap={2} className="col-md-5 mx-auto"> */}
-            <Button variant="primary" size="lg" style={{backgroundImage: "url('https://media.geeksforgeeks.org/wp-content/uploads/rk.png')"}}>
-            </Button>{' '}
-            <Button variant="primary" size="lg" style={{backgroundImage: "url('https://media.geeksforgeeks.org/wp-content/uploads/rk.png')"}}>
-            </Button>{' '}            
-            <Button variant="primary" size="lg" style={{backgroundImage: "url('https://media.geeksforgeeks.org/wp-content/uploads/rk.png')"}}>
-            </Button>{' '}           
-            <Button variant="primary" size="lg" style={{backgroundImage: 'https://media.geeksforgeeks.org/wp-content/uploads/rk.png'}}>
-            </Button>{' '}           
-            <Button variant="primary" size="lg" style={{backgroundImage: 'https://media.geeksforgeeks.org/wp-content/uploads/rk.png'}}>
-            </Button>{' '}           
-            <Button variant="primary" size="lg" style={{backgroundImage: 'https://media.geeksforgeeks.org/wp-content/uploads/rk.png'}}>
-            </Button>{' '}            
-            <Button variant="primary" size="lg" style={{backgroundImage: 'https://media.geeksforgeeks.org/wp-content/uploads/rk.png'}}>
-            </Button>{' '}            
-            <Button variant="primary" size="lg" style={{backgroundImage: 'https://media.geeksforgeeks.org/wp-content/uploads/rk.png'}}>
-            </Button>{' '}            
-            <Button variant="primary" size="lg" style={{backgroundImage: 'https://media.geeksforgeeks.org/wp-content/uploads/rk.png'}}>
-            </Button>{' '}
-        {/* <Stack/> */}
+         <Stack gap={20} className="col-md-5 mx-auto"> 
+            <div className="p-2" >
+                <ButtonGroup size="sm">
+                    <Button className="communities" variant="primary" />
+                </ButtonGroup>
+            </div>
+            
+            <br/>
+            
+            <div className="p-2" >
+                <ButtonGroup size="sm">
+                    <Button variant="primary" />
+                    
+                    <Button variant="primary"/>
+                    
+                    <Button variant="primary"/>
+                            
+                    <Button variant="primary"/>
+                            
+                    <Button variant="primary"/>
+                            
+                    <Button variant="primary"/>
+                            
+                    <Button variant="primary"/>
+                            
+                    <Button variant="primary"/>
+                            
+                    <Button variant="primary"/>
+                </ButtonGroup>
+            </div>
+
+         </Stack> 
         </div>
         </>
     );

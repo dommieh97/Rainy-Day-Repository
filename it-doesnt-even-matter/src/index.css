@@ -16,6 +16,12 @@ code {
 .App{
   display: flex;
 }
-.sidebar {
 
+#dropdown-basic-button{
+  width:12vw;
+}
+.communities{
+  height:3vh;
+  width:3vw;
+  border-radius: 50%;
 }
