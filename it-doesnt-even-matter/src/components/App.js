@@ -28,10 +28,10 @@ function App() {
 
       <div style={{gridColumn: 2, width:"12vw"}}>
 
-            <div style={{gridRow: 1, height:"8vh",border:"solid"}}>
+            <div style={{gridRow: 1, height:"4vh",border:"solid"}}>
               <TopThing/>
               </div>
-            <div style={{gridRow: 2, height:"80vh", border:"solid"}}>
+            <div style={{gridRow: 2, height:"84vh", border:"solid"}}>
               <Channels/>
             </div>
             <div style={{gridRow: 3 ,height:"12vh",border:"solid"}}>
