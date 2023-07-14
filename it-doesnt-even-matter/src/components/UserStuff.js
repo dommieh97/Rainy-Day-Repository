@@ -6,7 +6,7 @@ function UserStuff() {
   //⚙
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
-      <div style={{ flex: "1 0 auto", display: "flex", alignItems: "center" }}>
+      <div style={{ flex: "1 0 auto", display: "flex", alignItems: "center", color:'white' }}>
         PFP and name!!
       </div>
       <div style={{flex: "0 1 20px", display: "flex", justifyContent: "center" }}

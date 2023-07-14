@@ -31,3 +31,86 @@ code {
   transform: scale(1.1);
   transition-duration: 0.5s;
 }
+
+.chanDiv {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+ height: 0.5vh;
+  width: 16vh; 
+}
+
+.chanBttn {
+    transition: all .5s ease;
+    color: white;
+    border: none  white;
+    text-align: left;
+    line-height: 1;
+    background-color : 
+  transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+   
+}
+.chanBttn:hover {
+    color: #fff;
+    background-color: grey;
+  
+    
+}
+
+.dropdown-menu.show{
+  color:white;
+  background-color: black;
+  
+
+}
+
+
+ .dropdown a:link {
+  color:white;
+  text-decoration:none; 
+  font-size: larger;
+  
+} 
+
+#smallchan{
+  font-size:16px;
+  color: darkgray
+
+}
+#smallchan:hover{
+  color: white;
+}
+
+#plus{
+  margin-left: 40px;
+}
+
+#message  {
+  margin-left: 10px;
+  opacity: 160%;
+  color:white;
+
+}
+
+ #addmember{
+  margin-left: 10px;
+  opacity: 160%;
+}
+
+#addmember:hover{
+opacity: 100%;
+color: white;
+}
+
+#message:hover  {
+opacity:100%;
+}
+
+#avatar{
+  border-radius:50%;
+  margin-left: 50px;
+  margin-top: 10px;
+}
