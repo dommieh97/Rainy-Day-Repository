@@ -1,28 +1,31 @@
-import React from'react';
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import React from "react";
+import Button from "react-bootstrap/Button";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
 
-function UserStuff()
-{
-    //⚙ 
-    return(
-        <div>
-            <div style={{height:"60%", border:"solid"}}>PFP and name!!</div>
+function UserStuff() {
+  //⚙
+  return (
+    <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+      <div style={{ flex: "1 0 auto", display: "flex", alignItems: "center" }}>
+        PFP and name!!
+      </div>
+      <div style={{flex: "0 1 20px", display: "flex", justifyContent: "center" }}
+      >
+        <ButtonGroup style={{ display: "flex", width: "100%" }}>
+          <Button style={{  border: "solid",borderRadius: "0px",borderColor:'#313338', fontSize: 25, flex: "1" ,backgroundColor: "#2b2d31"}}>
+            ⚙
+          </Button>
+          <Button style={{ border: "solid",borderRadius: "0px",borderColor:'#313338', fontSize: 25, flex: "1" ,backgroundColor: "#2b2d31" }}>
+            👤
+            </Button>
+          <Button style={{ border: "solid",borderRadius: "0px",borderColor:'#313338', fontSize: 25, flex: "1" ,backgroundColor: "#2b2d31"}}>
+            ⏻
+          </Button>
+        </ButtonGroup>
+      </div>
+    </div>
+  );
 
-            <div style={{height:"40%"}}>
-            <>
-      <ButtonGroup size="sm">
-        <Button>⚙ </Button>
-        <Button>👤
-            <img style={{height:"40px", width:"40px"}}src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png"/>
-        </Button>
-        <Button>⏻</Button>
-      </ButtonGroup>
-    </>
-            </div>
-        </div>
-          );
-};
+}
 
-
-export default UserStuff
+export default UserStuff;

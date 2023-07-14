@@ -14,28 +14,28 @@ function App() {
     <>
     <MyContext.Provider value={{}}>
       
-    <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', height: "100vh",}}>
+    <div style={{ display: "flex", height: "100vh" }}>
+          <div style={{ flex: "0 0 4vw", background: "#1e1f22", border: "solid" }} >
+            <Communities />
+          </div>
 
-      <div style={{border:"solid",gridColumn: 1, width:'4vw', background:'green'}}>
-        <Communities/>
+          <div style={{ flex: "0 0 12vw", background: "#2b2d31", border: "solid" }}
+          >
+            <div style={{ height: "4vh", border: "solid" }}>
+              <TopThing />
+            </div>
+            <div style={{ height: "84vh", border: "solid" }}>
+              <Channels />
+            </div>
+            <div style={{ height: "12vh" }}>
+              <UserStuff />
+            </div>
+          </div>
+
+          <div style={{ flex: "1", background: "#313338", border: "solid" }}>
+            <Body />
+          </div>
         </div>
-
-      <div style={{gridColumn: 2, width:"12vw", background:'pink'}}>
-
-            <div style={{gridRow: 1, height:"4vh",border:"solid"}}>
-              <TopThing/>
-              </div>
-            <div style={{gridRow: 2, height:"84vh", border:"solid"}}>
-              <Channels/>
-            </div>
-            <div style={{gridRow: 3 ,height:"12vh",border:"solid"}}>
-              <UserStuff/>
-            </div>
-            
-      </div>
-
-      <div style={{border:"solid", gridColumn: 3,width:"84vw",background:'teal'}}><Body/></div>
-    </div>
 
 
     </MyContext.Provider>

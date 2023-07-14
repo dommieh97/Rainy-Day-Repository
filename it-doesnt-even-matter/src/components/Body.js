@@ -1,7 +1,7 @@
 import React from "react";
 import Card from './Card.js'
 
-function Body({})
+function Body()
 {
 
     // const allPokemons = pokemon.map(pokemon => <Card key={pokemon.url} pokemon={pokemon}/>)
