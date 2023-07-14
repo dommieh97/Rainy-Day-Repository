@@ -3,13 +3,12 @@ import Cards from "./Cards";
 import CardGroup from 'react-bootstrap/CardGroup';
 function Body({dog})
 {
-const newArray = []
 const allDogs = dog.map((dog) => <Cards dog={dog} key={dog.postLink} />);
 return(
-        <CardGroup style={{display:'inline-flex'}} itemsPerRow={4}>
+        <div id="photos">
             {allDogs}
-        </CardGroup>  
-          
+        </div>  
+
         );
 };
   

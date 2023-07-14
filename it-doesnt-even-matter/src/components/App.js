@@ -7,7 +7,7 @@ import Channels from './Channels';
 import TopThing from './TopThing';
 import Communities from './Communities';
 
- const dogAPI= "https://meme-api.com/gimme/dogpictures/8"; 
+ const dogAPI= "https://meme-api.com/gimme/dogpictures/20"; 
  const disneyAPI ="https://api.disneyapi.dev/character";
 
 
