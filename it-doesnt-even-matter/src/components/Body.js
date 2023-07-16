@@ -3,12 +3,17 @@ import Cards from "./Cards";
 import CardGroup from 'react-bootstrap/CardGroup';
 function Body({dog})
 {
+
+const {title, author, url} = dog;
 const allDogs = dog.map((dog) => <Cards dog={dog} key={dog.postLink} />);
 return(
-        <div id="photos">
-            {allDogs}
-        </div>  
-
+    <div className="scrollbar" id="style-2">
+        <div className="force-overflow">
+            <div id="photos" style={{height:'33%', width:'100%'}}>
+                {allDogs}
+            </div>  
+        </div>
+    </div>
         );
 };
   

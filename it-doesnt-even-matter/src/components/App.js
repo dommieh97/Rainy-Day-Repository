@@ -7,8 +7,8 @@ import Channels from './Channels';
 import TopThing from './TopThing';
 import Communities from './Communities';
 
- const dogAPI= "https://meme-api.com/gimme/dogpictures/20"; 
- const disneyAPI ="https://api.disneyapi.dev/character";
+ const dogAPI= "https://meme-api.com/gimme/dogpictures/50"; 
+//  const disneyAPI ="https://api.disneyapi.dev/character";
 
 
 function App() {
@@ -16,11 +16,11 @@ function App() {
 const [dog, setDog] = useState([])
 const [disney , setDisney] = useState([])
 
-useEffect(()=> {
-  fetch(disneyAPI)
-  .then(res => res.json())
-  .then (disneyData => setDisney(disneyData))
-},[])
+// useEffect(()=> {
+//   fetch(disneyAPI)
+//   .then(res => res.json())
+//   .then (disneyData => setDisney(disneyData))
+// },[])
 
 useEffect(() => 
 {
@@ -34,6 +34,7 @@ useEffect(() =>
     <MyContext.Provider value={{}}>
       
     <div style={{ display: "flex", height: "100vh" }}>
+          
           <div style={{ flex: "0 0 4vw", background: "#1e1f22", border: "solid" }} >
             <Communities />
           </div>
@@ -51,11 +52,11 @@ useEffect(() =>
             </div>
           </div>
 
-          <div style={{ flex: "1", background: "#313338", border: "solid" }}>
+          <div className="scrollbar" id="style-1" style={{overflowY:"scroll", flex: "1", backgroundColor:"#313338"}}>
             <Body dog={dog}/>
           </div>
-        </div>
-
+       
+      </div>
 
     </MyContext.Provider>
     </>

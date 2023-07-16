@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family:'Uni Sans Heavy', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif ;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height:100%;
@@ -18,6 +18,7 @@ code {
 
 .App{
   display: flex;
+  font:'Uni Sans Heavy';
 }
 
 #dropdown-basic-button{
@@ -30,6 +31,7 @@ code {
 {
   transform: scale(1.1);
   transition-duration: 0.5s;
+  border-radius: 0%;
 }
 
 .chanDiv {
@@ -46,9 +48,10 @@ code {
     border: none  white;
     text-align: left;
     line-height: 1;
-    background-color : 
+    background-color :#2b2d31 ; 
+    width: '100%' 
   transparent;
-    padding: 10px;
+    padding: 5px;
     outline: none;
     border-radius: 4px;
    
@@ -115,14 +118,32 @@ opacity:100%;
   margin-top: 10px;
 }
 
-@media (max-width: 1200px) {
+#photos {
+  /* Prevent vertical gaps */
+  line-height: 0;
+   
+  -webkit-column-count: 6;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    6;
+  -moz-column-gap:      0px;
+  column-count:         6;
+  column-gap:           0px;  
+}
+@media (max-width: 1700px) {
+  #photos {
+  -moz-column-count:    5;
+  -webkit-column-count: 5;
+  column-count:         5;
+  }
+}
+@media (max-width: 1400px) {
   #photos {
   -moz-column-count:    4;
   -webkit-column-count: 4;
   column-count:         4;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   #photos {
   -moz-column-count:    3;
   -webkit-column-count: 3;
@@ -136,22 +157,31 @@ opacity:100%;
   column-count:         2;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 650px) {
   #photos {
   -moz-column-count:    1;
   -webkit-column-count: 1;
   column-count:         1;
   }
 }
-#photos {
-  /* Prevent vertical gaps */
-  line-height: 0;
-   
-  -webkit-column-count: 6;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    6;
-  -moz-column-gap:      0px;
-  column-count:         6;
-  column-gap:           0px;  
+
+
+#style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
 }
 
+#style-1::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}

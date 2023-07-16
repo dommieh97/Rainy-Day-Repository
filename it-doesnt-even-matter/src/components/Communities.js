@@ -7,6 +7,19 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 function Communities() 
 {
+
+function handleHover(e)
+{
+    e.target.style.borderRadius = "25%";
+    e.target.style.transform= "scale(1.1)";
+    e.target.style.transitionDuration = "0.5s";
+}
+function handleLeave(e)
+{
+    e.target.style.borderRadius = "50%";
+    e.target.style.transform= "scale(1)";
+    e.target.style.transitionDuration = "0.5s";
+}
     return (
         <>
         <div>
@@ -17,7 +30,7 @@ function Communities()
 
                 <ButtonGroup size="sm">
                 <Col xs={6} md={4} >
-                     <Image alt='myHub' src="https://cdn-icons-png.flaticon.com/128/6723/6723246.png" roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
+                     <Image alt='myHub' src="https://cdn-icons-png.flaticon.com/128/6723/6723246.png" onMouseEnter={handleHover} onMouseLeave={handleLeave} roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
                 </Col>
                 </ButtonGroup>
             </div>
@@ -30,7 +43,7 @@ function Communities()
             <div className="p-2" >
                 <ButtonGroup size="sm">
                 <Col xs={6} md={4} >
-                     <Image alt="dogs"src="https://cdn-icons-png.flaticon.com/128/7298/7298818.png" roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
+                     <Image alt="dogs"src="https://cdn-icons-png.flaticon.com/128/7298/7298818.png" onMouseEnter={handleHover} onMouseLeave={handleLeave} roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
                 </Col>
                 </ButtonGroup>
             </div>
@@ -40,7 +53,7 @@ function Communities()
             <div className="p-2" >
                 <ButtonGroup size="sm">
                 <Col xs={6} md={4} >
-                     <Image alt="cats"src="https://cdn-icons-png.flaticon.com/128/1864/1864514.png" roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
+                     <Image alt="cats"src="https://cdn-icons-png.flaticon.com/128/1864/1864514.png" onMouseEnter={handleHover} onMouseLeave={handleLeave} roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
                 </Col>
                 </ButtonGroup>
             </div>
@@ -50,7 +63,7 @@ function Communities()
             <div className="p-2" >
                 <ButtonGroup size="sm">
                 <Col xs={6} md={4} >
-                     <Image alt="boba" src="https://cdn-icons-png.flaticon.com/128/3081/3081162.png" roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
+                     <Image alt="boba" src="https://cdn-icons-png.flaticon.com/128/3081/3081162.png" onMouseEnter={handleHover} onMouseLeave={handleLeave} roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
                 </Col>
                 </ButtonGroup>
             </div>
@@ -60,7 +73,7 @@ function Communities()
             <div className="p-2" >
                 <ButtonGroup size="sm">
                 <Col xs={6} md={4} >
-                     <Image alt="food" src="https://cdn-icons-png.flaticon.com/128/1623/1623786.png" roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786' }} />
+                     <Image alt="food" src="https://cdn-icons-png.flaticon.com/128/1623/1623786.png" onMouseEnter={handleHover} onMouseLeave={handleLeave} roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786' }} />
                 </Col>
                 </ButtonGroup>
             
@@ -71,7 +84,7 @@ function Communities()
             <div className="p-2" >
                 <ButtonGroup size="sm">
                 <Col xs={6} md={4} >
-                     <Image alt="sweets" src="https://cdn-icons-png.flaticon.com/128/9997/9997743.png" roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786' }} />
+                     <Image alt="sweets" src="https://cdn-icons-png.flaticon.com/128/9997/9997743.png" onMouseEnter={handleHover} onMouseLeave={handleLeave} roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786' }} />
                 </Col>
                 </ButtonGroup>
             
@@ -82,7 +95,7 @@ function Communities()
             <div className="p-2" >
                 <ButtonGroup size="sm">
                 <Col xs={6} md={4} >
-                     <Image alt="beach" src="https://cdn-icons-png.flaticon.com/128/3722/3722618.png" roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
+                     <Image alt="beach" src="https://cdn-icons-png.flaticon.com/128/3722/3722618.png" onMouseEnter={handleHover} onMouseLeave={handleLeave} roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
                 </Col>
                 </ButtonGroup>
             </div>
@@ -92,7 +105,7 @@ function Communities()
             <div className="p-2" >
                 <ButtonGroup size="sm">
                 <Col xs={6} md={4} >
-                     <Image alt="nature" src="https://cdn-icons-png.flaticon.com/128/3038/3038873.png" roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
+                     <Image alt="nature" src="https://cdn-icons-png.flaticon.com/128/3038/3038873.png" onMouseEnter={handleHover} onMouseLeave={handleLeave} roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
                 </Col>
                 </ButtonGroup>
             </div>
@@ -102,7 +115,7 @@ function Communities()
             <div className="p-2" >
                 <ButtonGroup size="sm">
                 <Col xs={6} md={4} >
-                     <Image alt="videoGames" src="https://cdn-icons-png.flaticon.com/128/1752/1752494.png" roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
+                     <Image alt="videoGames" src="https://cdn-icons-png.flaticon.com/128/1752/1752494.png" onMouseEnter={handleHover} onMouseLeave={handleLeave} roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
                 </Col>
                 </ButtonGroup>
             </div>
@@ -114,7 +127,7 @@ function Communities()
               <div className="p-2" >
                 <ButtonGroup size="sm">
                 <Col xs={6} md={4} >
-                     <Image alt="explore" src="https://cdn-icons-png.flaticon.com/128/868/868355.png" roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
+                     <Image alt="explore" src="https://cdn-icons-png.flaticon.com/128/868/868355.png" onMouseEnter={handleHover} onMouseLeave={handleLeave} roundedCircle style={{height:'52px',width:'52px', border:"solid", borderRadius:'50%', borderColor:'#707786'}} />
                 </Col>
                 </ButtonGroup>
             </div>
