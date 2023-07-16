@@ -1,10 +1,11 @@
 import React from "react";
 import Cards from "./Cards";
-import CardGroup from 'react-bootstrap/CardGroup';
-function Body({dog})
+import MyContext from "./MyContext";
+function Body()
 {
 
-const {title, author, url} = dog;
+const {dog} = React.useContext(MyContext);
+
 const allDogs = dog.map((dog) => <Cards dog={dog} key={dog.postLink} />);
 return(
     <div className="scrollbar" id="style-2">

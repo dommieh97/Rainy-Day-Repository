@@ -3,7 +3,8 @@ import Card from "react-bootstrap/Card";
 import MyContext from "./MyContext";
 
 function CardDisplay() {
-  // const {dog} = useContext(MyContext);
+ const {dog} = useContext(MyContext);
+ const {url,title,postLink} = dog;
   return (
     <div
       className="card-display"
@@ -19,7 +20,7 @@ function CardDisplay() {
       <Card className="card-display" style={{ display: "flex" }}>
         <Card.Img
           className="card-display-image"
-          src={`https://i.redd.it/oi9uavap9ubb1.jpg`}
+          src={url}
           style={{
             width: "100%",
           }}
@@ -35,11 +36,11 @@ function CardDisplay() {
           }}
         >
           <a
-            href="https://redd.it/14yntme"
+            href={postLink}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Link to reddit post
+            Link to Original
           </a>
           <p
             style={{
@@ -53,7 +54,7 @@ function CardDisplay() {
             {true ? "NSFW" : null}
           </p>
           <h1 style={{ border: "solid", borderColor: "blue" }}>
-            Old Man Max with the Dog Nice
+            {title}
           </h1>
         </Card.Body>
       </Card>
