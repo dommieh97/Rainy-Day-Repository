@@ -4,9 +4,9 @@ import MyContext from "./MyContext";
 function CatBody()
 {
 
-const {cat} = React.useContext(MyContext);
+const {apiData} = React.useContext(MyContext);
 
-const allCats = cat.map((cat) => <Cards community={cat} key={cat.postLink} />);
+const allCats = apiData.map((cat) => <Cards community={cat} path={`Cat`} key={cat.postLink} />);
 return(
     <div className="scrollbar" id="style-2">
         <div className="force-overflow">

@@ -1,24 +1,23 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import Cards from "./Cards";
 import MyContext from "./MyContext";
-function DogBody()
-{
-
-const {dog} = useContext(MyContext);
-const allDogs = dog.map((dog) => <Cards community={dog} key={dog.postLink} />);
-return(
+function DogBody() {
+  const { apiData } = useContext(MyContext);
+  const allDogs = apiData.map((dog) => (
+    <Cards community={dog} path={`Dog`} key={dog.postLink} />
+  ));
+  return (
     <div className="scrollbar" id="style-1">
-        <div className="force-overflow">
-            <div id="photos" style={{height:'33%', width:'100%'}}>
-                {allDogs}
-            </div>  
+      <div className="force-overflow">
+        <div id="photos" style={{ height: "33%", width: "100%" }}>
+          {allDogs}
         </div>
+      </div>
     </div>
-        );
-};
-  
-export default DogBody;
+  );
+}
 
+export default DogBody;
 
 //   {"postLink": "https://redd.it/14yntme",
 //   "subreddit": "dogpictures",

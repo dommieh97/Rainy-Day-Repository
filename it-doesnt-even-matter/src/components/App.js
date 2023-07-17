@@ -1,16 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, {useState} from "react";
 import UserStuff from "./UserStuff";
-import Channels from "./DogChannels";
 import TopThing from "./TopThing";
 import Communities from "./Communities";
 import { Outlet } from "react-router-dom";
+import Channels from "./Channels";
+
 function App() {
+  
+  const [data, setData] = useState([]);
+  
 
   return (
     <>
       <div style={{ display: "flex", height: "100vh" }}>
         <div style={{ flex: "0 0 4vw", background: "#1e1f22", width: "150px" }}>
-          <Communities />
+          <Communities setData={setData}/>
         </div>
 
         <div style={{ width: "240px", background: "#2b2d31", height: "100%" }}>
@@ -22,7 +26,7 @@ function App() {
             id="CHAN"
             style={{ marginTop: "40px", position: "relative", height: "80%" }}
           >
-            <Channels />
+            <Channels data={data}/>
           </div>
 
           <div style={{ position: "absolute", bottom: "0", width: "240px" }}>
@@ -40,12 +44,10 @@ function App() {
             color: "#2b2d31",
           }}
         >
-        <Outlet/>
-
+          <Outlet />
         </div>
       </div>
     </>
-   
   );
 }
 

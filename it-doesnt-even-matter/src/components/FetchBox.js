@@ -1,8 +1,8 @@
-import React,{useEffect,useState} from 'react';
-import App from './App';
-import MyContext from './MyContext';
-import { Routes, Route } from "react-router-dom";
-import TopThing from './TopThing';
+import React, { useEffect, useState } from "react";
+import App from "./App";
+import MyContext from "./MyContext";
+import { Routes, Route, useLocation } from "react-router-dom";
+import TopThing from "./TopThing";
 import DogBody from "./DogBody";
 import CatBody from "./CatBody";
 import BobaBody from "./BobaBody";
@@ -11,102 +11,140 @@ import DessertBody from "./DessertBody";
 import NatureBody from "./NatureBody";
 import FoodBody from "./FoodBody";
 import FlowerBody from "./FlowerBody";
-import UserStuff from './UserStuff';
-import Communities from './Communities';
-import Channels from './DogChannels';
-import RayBody from './RayBody';
-import VGBody from './VGBody';
+import UserStuff from "./UserStuff";
+import Communities from "./Communities";
+import Channels from "./Channels";
+import RayBody from "./RayBody";
+import VGBody from "./VGBody";
 
-// const rayAPI=      "https://localhost:3000/rays"; 
-const dogAPI=      "https://meme-api.com/gimme/dogpictures/50"; 
-const bobaAPI=     "https://meme-api.com/gimme/boba/50";
-const catAPI=      "https://meme-api.com/gimme/catpictures/50";
-const foodAPI=     "https://meme-api.com/gimme/FoodPorn/50";
-const dessertAPI=  "https://meme-api.com/gimme/DessertPorn/50";
-const beachAPI=    "https://meme-api.com/gimme/BeachPorn/50";
-const natureAPI=   "https://meme-api.com/gimme/natureporn/50";
-const flowerApi=   "https://meme-api.com/gimme/flowerporn/50";
-const vgAPI=      "https://meme-api.com/gimme/gamecollecting/50";
+const rayAPI = "https://localhost:3000/rays";
+const dogAPI = "https://meme-api.com/gimme/dogpictures/20";
+const bobaAPI = "https://meme-api.com/gimme/boba/20";
+const catAPI = "https://meme-api.com/gimme/catpictures/20";
+const foodAPI = "https://meme-api.com/gimme/FoodPorn/20";
+const dessertAPI = "https://meme-api.com/gimme/DessertPorn/20";
+const beachAPI = "https://meme-api.com/gimme/BeachPorn/20";
+const natureAPI = "https://meme-api.com/gimme/natureporn/20";
+const flowerApi = "https://meme-api.com/gimme/flowerporn/20";
+const vidgAPI = "https://meme-api.com/gimme/gamecollecting/20";
 
-function FetchBox()
- {
-    const [ray, setRay] = useState([])
-    const [dog, setDog] = useState([])
-    const [boba, setBoba] = useState([])
-    const [cat, setCat] = useState([])
-    const [food, setFood] = useState([])
-    const [dessert, setDessert] = useState([])
-    const [beach, setBeach] = useState([])
-    const [nature, setNature] = useState([])
-    const [flower, setFlower] = useState([])
-    const [vg, setVG] = useState([])
-useEffect(() => 
-    {
-    // fetch(rayAPI)
-    // .then(res => res.json())
-    // .then(data=> setRay(data.memes))
+const API = [
+  dogAPI,
+  bobaAPI,
+  catAPI,
+  foodAPI,
+  dessertAPI,
+  beachAPI,
+  natureAPI,
+  flowerApi,
+  vidgAPI,
+  rayAPI,
+];
 
-    fetch(dogAPI)
-    .then(res => res.json())
-    .then(data=> setDog(data.memes))
+function FetchBox() {
+  const [ray, setRay] = useState([]);
+  const [dog, setDog] = useState([]);
+  const [boba, setBoba] = useState([]);
+  const [cat, setCat] = useState([]);
+  const [food, setFood] = useState([]);
+  const [dessert, setDessert] = useState([]);
+  const [beach, setBeach] = useState([]);
+  const [nature, setNature] = useState([]);
+  const [flower, setFlower] = useState([]);
+  const [vg, setVG] = useState([]);
+  const [apiData, setApiData] = useState([]);
+  const location = useLocation();
 
-    fetch(bobaAPI)
-    .then(res => res.json())
-    .then(data=> setBoba(data.memes))
+  useEffect(() => {
+    const path = location.pathname.toLowerCase();
+    const apiDictionary = {
+      dog: dogAPI,
+      bob: bobaAPI,
+      cat: catAPI,
+      foo: foodAPI,
+      des: dessertAPI,
+      bea: beachAPI,
+      nat: natureAPI,
+      flo: flowerApi,
+      vga: vidgAPI,
+      ray: rayAPI,
+    };
 
-    fetch(catAPI)
-    .then(res => res.json())
-    .then(data=> setCat(data.memes))
+    const matchingKey = Object.keys(apiDictionary).find((key) =>
+      path.includes(key)
+    );
 
-    fetch(foodAPI)
-    .then(res => res.json())
-    .then(data=> setFood(data.memes))
+    if (matchingKey) {
+      const selectedAPI = apiDictionary[matchingKey];
+      fetch(selectedAPI)
+        .then((res) => res.json())
+        .then((data) => {
+          if (matchingKey === "ray") {
+            setRay(data.memes);
+          } else if (matchingKey === "dog") {
+            setApiData(data.memes);
+          } else if (matchingKey === "bob") {
+            setBoba(data.memes);
+          } else if (matchingKey === "cat") {
+            setApiData(data.memes);
+          } else if (matchingKey === "foo") {
+            setFood(data.memes);
+          } else if (matchingKey === "des") {
+            setDessert(data.memes);
+          } else if (matchingKey === "bea") {
+            setBeach(data.memes);
+          } else if (matchingKey === "nat") {
+            setNature(data.memes);
+          } else if (matchingKey === "flo") {
+            setFlower(data.memes);
+          } else if (matchingKey === "vga") {
+            setVG(data.memes);
+          }
+        });
+    }
+  }, [location]);
 
-    fetch(dessertAPI)
-    .then(res => res.json())
-    .then(data=> setDessert(data.memes))
-    
-    fetch(beachAPI)
-    .then(res => res.json())
-    .then(data=> setBeach(data.memes))
-
-    fetch(natureAPI)
-    .then(res => res.json())
-    .then(data=> setNature(data.memes))
-    
-    fetch(flowerApi)
-    .then(res => res.json())
-    .then(data=> setFlower(data.memes))
-
-    fetch(vgAPI)
-    .then(res => res.json())
-    .then(data=> setVG(data.memes))
-
-},[])
-
-return (
-    <MyContext.Provider value ={{ ray,dog, cat, boba, dessert, beach, nature, food, flower,vg }}>
+  return (
+    <MyContext.Provider
+      value={{
+        apiData,
+        ray,
+        dog,
+        cat,
+        boba,
+        dessert,
+        beach,
+        nature,
+        food,
+        flower,
+        vg,
+      }}
+    >
       <Routes>
-        <Route element={
+        <Route
+          element={
             <App>
-                <UserStuff/>
-                <Communities/>
-                <TopThing/>
-                <Channels/>
-            </App>}>
-            <Route path="/" element={<RayBody />} />
+              <UserStuff />
+              <Communities />
+              <TopThing />
+              <Channels />
+            </App>
+          }
+        >
+          <Route path="/" element={<RayBody />} />
           <Route path="/Dog" element={<DogBody />} />
+          <Route path={`/Dog`} element={<DogBody />} />
           <Route path="/Cat" element={<CatBody />} />
           <Route path="/Dessert" element={<DessertBody />} />
           <Route path="/Food" element={<FoodBody />} />
           <Route path="/Boba" element={<BobaBody />} />
           <Route path="/Nature" element={<NatureBody />} />
           <Route path="/Beach" element={<BeachBody />} />
-          <Route path="/Flower" element={<FlowerBody/>}/>
-          <Route path="/Video-Games" element={<VGBody/>}/>
+          <Route path="/Flower" element={<FlowerBody />} />
+          <Route path="/Video-Games" element={<VGBody />} />
         </Route>
       </Routes>
     </MyContext.Provider>
   );
 }
- export default FetchBox;
+export default FetchBox;
