@@ -1,12 +1,12 @@
 import React from "react";
 import Cards from "./Cards";
 import MyContext from "./MyContext";
-function Body()
+function CatBody()
 {
 
 const {cat} = React.useContext(MyContext);
 
-const allCats = cat.map((cat) => <Cards cat={cat} key={cat.postLink} />);
+const allCats = cat.map((cat) => <Cards community={cat} key={cat.postLink} />);
 return(
     <div className="scrollbar" id="style-2">
         <div className="force-overflow">
@@ -18,6 +18,6 @@ return(
         );
 };
   
-export default Body;
+export default CatBody;
 
 

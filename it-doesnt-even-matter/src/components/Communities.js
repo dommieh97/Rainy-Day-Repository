@@ -4,6 +4,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { Link } from 'react-router-dom';
 
 function Communities() 
 {
@@ -40,6 +41,7 @@ function handleLeave(e)
 
             <ButtonGroup size="sm">
               <Col xs={6} md={4}>
+              <Link to="/">
                 <Image
                   alt="myHub"
                   src="https://cdn-icons-png.flaticon.com/128/6723/6723246.png"
@@ -54,6 +56,7 @@ function handleLeave(e)
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
                 />
+                </Link>
               </Col>
             </ButtonGroup>
           </div>
@@ -95,8 +98,9 @@ function handleLeave(e)
               <div className="p-2">
                 <ButtonGroup size="sm">
                   <Col xs={6} md={4}>
+                  <Link to="/Dog">
                     <Image
-                      alt="dogs"
+                      id="dog"
                       src="https://cdn-icons-png.flaticon.com/128/7298/7298818.png"
                       roundedCircle
                       style={{
@@ -109,6 +113,8 @@ function handleLeave(e)
                       onMouseEnter={handleHover}
                       onMouseLeave={handleLeave}
                     />
+                    </Link>
+
                   </Col>
                 </ButtonGroup>
               </div>
@@ -118,8 +124,9 @@ function handleLeave(e)
               <div className="p-2">
                 <ButtonGroup size="sm">
                   <Col xs={6} md={4}>
+                  <Link to="/Cat">
                     <Image
-                      alt="cats"
+                      id="cat"
                       src="https://cdn-icons-png.flaticon.com/128/1864/1864514.png"
                       roundedCircle
                       style={{
@@ -132,6 +139,8 @@ function handleLeave(e)
                       onMouseEnter={handleHover}
                       onMouseLeave={handleLeave}
                     />
+                    </Link>
+
                   </Col>
                 </ButtonGroup>
               </div>
@@ -141,6 +150,7 @@ function handleLeave(e)
               <div className="p-2">
                 <ButtonGroup size="sm">
                   <Col xs={6} md={4}>
+                  <Link to="/Boba">
                     <Image
                       alt="boba"
                       src="https://cdn-icons-png.flaticon.com/128/3081/3081162.png"
@@ -155,6 +165,7 @@ function handleLeave(e)
                       onMouseEnter={handleHover}
                       onMouseLeave={handleLeave}
                     />
+                    </Link>
                   </Col>
                 </ButtonGroup>
               </div>
@@ -164,6 +175,7 @@ function handleLeave(e)
               <div className="p-2">
                 <ButtonGroup size="sm">
                   <Col xs={6} md={4}>
+                  <Link to="/Food">
                     <Image
                       alt="food"
                       src="https://cdn-icons-png.flaticon.com/128/1623/1623786.png"
@@ -178,6 +190,7 @@ function handleLeave(e)
                       onMouseEnter={handleHover}
                       onMouseLeave={handleLeave}
                     />
+                    </Link>
                   </Col>
                 </ButtonGroup>
               </div>
@@ -187,8 +200,9 @@ function handleLeave(e)
               <div className="p-2">
                 <ButtonGroup size="sm">
                   <Col xs={6} md={4}>
+                  <Link to="/Dessert">
                     <Image
-                      alt="sweets"
+                      alt="dessert"
                       src="https://cdn-icons-png.flaticon.com/128/9997/9997743.png"
                       roundedCircle
                       style={{
@@ -201,6 +215,7 @@ function handleLeave(e)
                       onMouseEnter={handleHover}
                       onMouseLeave={handleLeave}
                     />
+                    </Link>
                   </Col>
                 </ButtonGroup>
               </div>
@@ -210,6 +225,7 @@ function handleLeave(e)
               <div className="p-2">
                 <ButtonGroup size="sm">
                   <Col xs={6} md={4}>
+                  <Link to="/Beach">
                     <Image
                       alt="beach"
                       src="https://cdn-icons-png.flaticon.com/128/3722/3722618.png"
@@ -224,6 +240,7 @@ function handleLeave(e)
                       onMouseEnter={handleHover}
                       onMouseLeave={handleLeave}
                     />
+                    </Link>
                   </Col>
                 </ButtonGroup>
               </div>
@@ -233,6 +250,7 @@ function handleLeave(e)
               <div className="p-2">
                 <ButtonGroup size="sm">
                   <Col xs={6} md={4}>
+                  <Link to="/Nature">
                     <Image
                       alt="nature"
                       src="https://cdn-icons-png.flaticon.com/128/3038/3038873.png"
@@ -247,6 +265,7 @@ function handleLeave(e)
                       onMouseEnter={handleHover}
                       onMouseLeave={handleLeave}
                     />
+                    </Link>
                   </Col>
                 </ButtonGroup>
               </div>
@@ -256,8 +275,9 @@ function handleLeave(e)
               <div className="p-2">
                 <ButtonGroup size="sm">
                   <Col xs={6} md={4}>
+                  <Link to="/Flower">
                     <Image
-                      alt="videoGames"
+                      alt="Flowers"
                       src="https://cdn-icons-png.flaticon.com/128/3200/3200044.png"
                       roundedCircle
                       style={{
@@ -270,6 +290,7 @@ function handleLeave(e)
                       onMouseEnter={handleHover}
                       onMouseLeave={handleLeave}
                     />
+                    </Link>
                   </Col>
                 </ButtonGroup>
               
@@ -280,20 +301,24 @@ function handleLeave(e)
               <div className="p-2">
                 <ButtonGroup size="sm">
                   <Col xs={6} md={4}>
-                    <Image
-                      alt="videoGames"
-                      src="https://cdn-icons-png.flaticon.com/128/1752/1752494.png"
-                      roundedCircle
-                      style={{
-                        height: "52px",
-                        width: "52px",
-                        border: "solid",
-                        borderRadius: "50%",
-                        borderColor: "#707786",
-                      }}
+                    <Link to="/Video-Games">
+                        <Image
+                            alt="videoGames"
+                            src="https://cdn-icons-png.flaticon.com/128/1752/1752494.png"
+                            roundedCircle
+                            style=
+                            {{
+                                height: "52px",
+                                width: "52px",
+                                border: "solid",
+                                borderRadius: "50%",
+                                borderColor: "#707786",
+                            }}
                       onMouseEnter={handleHover}
                       onMouseLeave={handleLeave}
-                    />
+                        />
+                    </Link>
+
                   </Col>
                 </ButtonGroup>
               

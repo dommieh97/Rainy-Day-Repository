@@ -1,23 +1,23 @@
 import React from "react";
 import Cards from "./Cards";
 import MyContext from "./MyContext";
-function BobaBody()
+function FlowerBody()
 {
+const {flower} = React.useContext(MyContext);
 
-const {boba} = React.useContext(MyContext);
 
-const allBoba = boba.map((boba) => <Cards community={boba} key={boba.postLink} />);
+const allFlowers = flower.map((flower) => <Cards community={flower} key={flower.postLink} />);
 return(
     <div className="scrollbar" id="style-2">
         <div className="force-overflow">
             <div id="photos" style={{height:'33%', width:'100%'}}>
-                {allBoba}
+                {allFlowers}
             </div>  
         </div>
     </div>
         );
 };
   
-export default BobaBody;
+export default FlowerBody;
 
 

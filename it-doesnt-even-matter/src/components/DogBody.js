@@ -1,11 +1,11 @@
 import React,{useContext} from "react";
 import Cards from "./Cards";
 import MyContext from "./MyContext";
-function Body()
+function DogBody()
 {
 
 const {dog} = useContext(MyContext);
-const allDogs = dog.map((dog) => <Cards dog={dog} key={dog.postLink} />);
+const allDogs = dog.map((dog) => <Cards community={dog} key={dog.postLink} />);
 return(
     <div className="scrollbar" id="style-1">
         <div className="force-overflow">
@@ -17,7 +17,7 @@ return(
         );
 };
   
-export default Body;
+export default DogBody;
 
 
 //   {"postLink": "https://redd.it/14yntme",

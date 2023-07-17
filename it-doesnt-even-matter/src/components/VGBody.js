@@ -1,23 +1,24 @@
 import React from "react";
 import Cards from "./Cards";
 import MyContext from "./MyContext";
-function Body()
+function VGBody()
 {
-const {flower} = React.useContext(MyContext);
+
+const {vg} = React.useContext(MyContext);
 
 
-const allFlowers = flower.map((flower) => <Cards flower={flower} key={flower.postLink} />);
+const allVG = vg.map((vg) => <Cards community={vg} key={vg.postLink} />);
 return(
     <div className="scrollbar" id="style-2">
         <div className="force-overflow">
             <div id="photos" style={{height:'33%', width:'100%'}}>
-                {allFlowers}
+                {allVG}
             </div>  
         </div>
     </div>
         );
 };
   
-export default Body;
+export default VGBody;
 
 

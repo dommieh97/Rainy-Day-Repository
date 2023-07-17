@@ -3,9 +3,9 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import MyContext from './MyContext';
 
-function Cards({dog})
+function Cards(props)
 {
-  const {author, url} = dog;
+  const {author, url} = props.community;
   const [isHovered, setIsHovered] = useState(false);
 
  

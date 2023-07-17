@@ -1,13 +1,13 @@
 import React from "react";
 import Cards from "./Cards";
 import MyContext from "./MyContext";
-function Body()
+function BeachBody()
 {
 
 const {beach} = React.useContext(MyContext);
 
 
-const allBeaches = beach.map((beach) => <Cards beach={beach} key={beach.postLink} />);
+const allBeaches = beach.map((beach) => <Cards community={beach} key={beach.postLink} />);
 return(
     <div className="scrollbar" id="style-2">
         <div className="force-overflow">
@@ -19,6 +19,6 @@ return(
         );
 };
   
-export default Body;
+export default BeachBody;
 
 

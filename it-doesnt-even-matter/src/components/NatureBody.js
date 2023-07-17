@@ -1,12 +1,12 @@
 import React from "react";
 import Cards from "./Cards";
 import MyContext from "./MyContext";
-function Body()
+function NatureBody()
 {
 
 const {nature} = React.useContext(MyContext);
 
-const allNature = nature.map((nature) => <Cards nature={nature} key={nature.postLink} />);
+const allNature = nature.map((nature) => <Cards community={nature} key={nature.postLink} />);
 return(
     <div className="scrollbar" id="style-2">
         <div className="force-overflow">
@@ -18,6 +18,6 @@ return(
         );
 };
   
-export default Body;
+export default NatureBody;
 
 

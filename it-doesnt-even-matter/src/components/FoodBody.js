@@ -1,12 +1,12 @@
 import React from "react";
 import Cards from "./Cards";
 import MyContext from "./MyContext";
-function Body()
+function FoodBody()
 {
 const {food} = React.useContext(MyContext);
 
 
-const allFood = food.map((food) => <Cards food={food} key={food.postLink} />);
+const allFood = food.map((food) => <Cards community={food} key={food.postLink} />);
 return(
     <div className="scrollbar" id="style-2">
         <div className="force-overflow">
@@ -18,6 +18,6 @@ return(
         );
 };
   
-export default Body;
+export default FoodBody;
 
 

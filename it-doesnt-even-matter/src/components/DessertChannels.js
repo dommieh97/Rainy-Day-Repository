@@ -1,6 +1,6 @@
 import Stack from 'react-bootstrap/Stack';
 import React,{useState} from 'react';
-function Channels() {     
+function DessertChannels() {     
  const [channels, setChannels] = useState(true);
 
 function handleChannels()
@@ -21,17 +21,17 @@ return (
         </span>
       </div>
       <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
-}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong> good-puppers</strong></button>
+}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong> sweet-tooth</strong></button>
       <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
-}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>german-shepherds</strong></button>
+}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>cake-dress-up</strong></button>
       <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
-}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>corgis</strong></button>
+}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>smol-cake</strong></button>
       <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
-}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>weeeeenies</strong></button>
+}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>melty-yums</strong></button>
       <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
-}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>alaskan-huskers</strong></button>
+}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>ma-macarons</strong></button>
       <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
-}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>golden-retriever</strong></button>
+}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>sfw-pies-only</strong></button>
 
     </Stack>
 
@@ -41,6 +41,6 @@ return (
 }
 
 
-export default Channels;
+export default DessertChannels;
 
   // if (/${communities}) ${channel} => ${channel} 
