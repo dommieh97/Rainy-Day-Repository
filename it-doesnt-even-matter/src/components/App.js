@@ -7,26 +7,13 @@ import TopThing from './TopThing';
 import Communities from './Communities';
 import MyContext from './MyContext';
 
- const dogAPI= "https://meme-api.com/gimme/dogpictures/50"; 
- const bobaAPI= "https://meme-api.com/gimme/boba/50";
- const catAPI= "https://meme-api.com/gimme/catpictures/50";
- const foodAPI= "https://meme-api.com/gimme/FoodPorn/50";
- const dessertAPI= "https://meme-api.com/gimme/DessertPorn/50";
- const beachAPI= "https://meme-api.com/gimme/BeachPorn/50";
- const natureAPI= "https://meme-api.com/gimme/natureporn/50";
 
 //  const disneyAPI ="https://api.disneyapi.dev/character";
 
 
-function App() {
+function App() 
+{
 
-const [dog, setDog] = useState([])
-const [boba, setBoba] = useState([])
-const [cat, setCat] = useState([])
-const [food, setFood] = useState([])
-const [dessert, setDessert] = useState([])
-const [beach, setBeach] = useState([])
-const [nature, setNature] = useState([])
 // const [disney , setDisney] = useState([])
 
 // useEffect(()=> {
@@ -35,85 +22,33 @@ const [nature, setNature] = useState([])
 //   .then (disneyData => setDisney(disneyData))
 // },[])
 
-useEffect(() => 
-{
-  fetch(dogAPI)
-  .then(res => res.json())
-  .then(data=> setDog(data.memes))
-},[])
 
-useEffect(() => 
-{
-  fetch(bobaAPI)
-  .then(res => res.json())
-  .then(data=> setBoba(data.memes))
-},[])
 
-useEffect(() => 
-{
-  fetch(catAPI)
-  .then(res => res.json())
-  .then(data=> setCat(data.memes))
-},[])
-
-useEffect(() => 
-{
-  fetch(foodAPI)
-  .then(res => res.json())
-  .then(data=> setFood(data.memes))
-},[])
-
-useEffect(() => 
-{
-  fetch(dessertAPI)
-  .then(res => res.json())
-  .then(data=> setDessert(data.memes))
-},[])
-
-useEffect(() => 
-{
-  fetch(beachAPI)
-  .then(res => res.json())
-  .then(data=> setBeach(data.memes))
-},[])
-
-useEffect(() => 
-{
-  fetch(natureAPI)
-  .then(res => res.json())
-  .then(data=> setNature(data.memes))
-},[])
-
-  return (
+ return (
     <>
-    <MyContext.Provider value={{dog,cat,boba,dessert,nature,food,beach}}>
-      
     <div style={{ display: "flex", height: "100vh" }}>
-          
-          <div style={{ flex: "0 0 4vw", background: "#1e1f22", border: "solid" }} >
+          <div style={{flex: "0 0 4vw",background: "#1e1f22",  width: "150px"}}>
             <Communities />
           </div>
 
-          <div style={{ flex: "0 0 12vw", background: "#2b2d31", border: "solid" }}
-          >
-            <div style={{border:'solid', height: "4vh" }}>
+          <div style={{ width: "240px", background: "#2b2d31", height: "100%" }}>
+            <div style={{ position:"absolute", top:"0"}}>
               <TopThing />
             </div>
-            <div style={{ border:'solid',height: "84vh" }}>
+
+            <div id="CHAN" style={{ marginTop: "40px",position:"relative", height: "80%" }}>
               <Channels />
             </div>
-            <div style={{border:'solid', height: "11vh" }}>
+
+            <div style={{ position: "absolute", bottom: "0", width: "240px" }}>
               <UserStuff />
             </div>
           </div>
 
-          <div className="scrollbar" id="style-1" style={{overflowY:"scroll", flex: "1", backgroundColor:"#313338"}}>
-            <Body />
+          <div className="scrollbar" id="style-1" style={{overflowY:"scroll", flex: "1", backgroundColor:"#313338", color:'#2b2d31'}}>
+            <Body/>
           </div>
-       
-      </div>
-
-    </MyContext.Provider>
+        </div>
     </>
   );
 }

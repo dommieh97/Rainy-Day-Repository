@@ -1,17 +1,37 @@
 import Stack from 'react-bootstrap/Stack';
+import React,{useState} from 'react';
+function Channels() {     
+ const [channels, setChannels] = useState(true);
 
-function Channels() {          
+function handleChannels()
+{
+  setChannels(!channels);
+}
+
 return ( 
 
-<div className="channels" stlye={{color:'#6e7373'}}>
+<div className="channels" style={{color:'#6e7373'}}>
     <Stack gap={5}>
-    <small id="smallchan"> 📺 Channels<small id="plus"> ＋ </small></small>
-      <button className="chanBttn"><div className="chanDiv"> ＃good-puppers</div></button>
-      <button className="chanBttn"><div className="chanDiv"> ＃german-shepherds</div></button>
-      <button className="chanBttn"><div className="chanDiv"> ＃corgis</div></button>
-      <button className="chanBttn"><div className="chanDiv"> ＃weeeeenies</div></button>
-      <button className="chanBttn"><div className="chanDiv"> ＃alaskan-huskers</div></button>
-      <button className="chanBttn"><div className="chanDiv"> ＃golden-retriever</div></button>
+    <div style={{width:'240px', position:"relative"}}>
+      <strong id="smallchan">
+        <small style={{paddingLeft:'5px',paddingRight:'5px',paddingTop:'5px',  transform: channels? 'rotate(90deg)': 'rotate(0deg)',display: 'inline-block',transition: 'transform 0.3s ease'}} onClick={handleChannels}> &gt; </small>
+        CHANNELS</strong>
+        <span style={{paddingLeft:'110px'}}>
+          <span id="smallChanSpan">＋</span>
+        </span>
+      </div>
+      <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
+}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong> good-puppers</strong></button>
+      <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
+}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>german-shepherds</strong></button>
+      <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
+}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>corgis</strong></button>
+      <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
+}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>weeeeenies</strong></button>
+      <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
+}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>alaskan-huskers</strong></button>
+      <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
+}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>golden-retriever</strong></button>
 
     </Stack>
 

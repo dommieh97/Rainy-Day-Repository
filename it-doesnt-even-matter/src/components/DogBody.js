@@ -1,14 +1,13 @@
-import React from "react";
+import React,{useContext} from "react";
 import Cards from "./Cards";
 import MyContext from "./MyContext";
 function Body()
 {
 
-const {dog} = React.useContext(MyContext);
-
+const {dog} = useContext(MyContext);
 const allDogs = dog.map((dog) => <Cards dog={dog} key={dog.postLink} />);
 return(
-    <div className="scrollbar" id="style-2">
+    <div className="scrollbar" id="style-1">
         <div className="force-overflow">
             <div id="photos" style={{height:'33%', width:'100%'}}>
                 {allDogs}

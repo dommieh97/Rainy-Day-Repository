@@ -7,8 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height:100%;
   color: white;
+  background-color: #1e1f22;
 }
 
+html
+{
+  background-color: #1e1f22;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -19,10 +24,11 @@ code {
 .App{
   display: flex;
   font:'Uni Sans Heavy';
+  background-color: #1e1f22;
 }
 
 #dropdown-basic-button{
-  width:12vw;
+  width:240px;
   background-color: #2b2d31;
   border-color: #313338;
 }
@@ -34,33 +40,32 @@ code {
   border-radius: 0%;
 }
 
-.chanDiv {
-  margin-bottom: 20px;
-  margin-top: 10px;
-  margin-left: 5px;
- height: 0.5vh;
-  width: 16vh; 
-}
-
 .chanBttn {
+      margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 90%; 
     transition: all .5s ease;
-    color: white;
-    border: none  white;
+    color: #7a7e88;
+    border: none  ;
     text-align: left;
     line-height: 1;
     background-color :#2b2d31 ; 
-    width: '100%' 
-  transparent;
     padding: 5px;
     outline: none;
     border-radius: 4px;
    
 }
 .chanBttn:hover {
-    color: #fff;
-    background-color: grey;
+    color: #dbdee1;
+    background-color: #36373d;
   
     
+}
+
+#dropdown
+{
+  width:auto
 }
 
 .dropdown-menu.show{
@@ -79,14 +84,23 @@ code {
 } 
 
 #smallchan{
-  font-size:16px;
-  color: darkgray
+  font-size:14px;
+  color: #7a7e88;
+  
 
 }
 #smallchan:hover{
-  color: white;
+  color: #dbdee1;
+  cursor: pointer;
 }
-
+#smallChanSpan
+{
+  color: #7a7e88;
+}
+#smallChanSpan:hover{
+  color: #dbdee1;
+  cursor: pointer;
+}
 #plus{
   margin-left: 40px;
 }
@@ -170,7 +184,7 @@ opacity:100%;
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
-	background-color: #F5F5F5;
+	background-color: #2b2d31;
 }
 
 #style-1::-webkit-scrollbar
