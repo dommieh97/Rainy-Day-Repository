@@ -1,12 +1,10 @@
 import React from "react";
 import Cards from "../Cards";
-import MyContext from "../MyContext";
-function NatureBody()
+
+function NatureBody({nature})
 {
 
-const {apiData} = React.useContext(MyContext);
-
-const allNature = apiData.map((nature) => <Cards community={nature} key={nature.postLink} />);
+const allNature = nature.map((nature) => <Cards community={nature} key={nature.postLink} />);
 return(
     <div className="scrollbar" id="style-2">
         <div className="force-overflow">

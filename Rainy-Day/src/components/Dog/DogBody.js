@@ -1,11 +1,9 @@
-import React,{useContext} from "react";
+import React from "react";
 import Cards from "../Cards";
-import MyContext from "../MyContext";
-function DogBody()
+function DogBody({dog})
 {
 
-const {apiData} = useContext(MyContext);
-const allDogs = apiData.map((dog) => <Cards community={dog} key={dog.postLink} />);
+const allDogs = dog.map((dog) => <Cards community={dog} key={dog.postLink} />);
 return(
     <div className="scrollbar" id="style-1">
         <div className="force-overflow">

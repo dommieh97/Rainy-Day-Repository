@@ -7,6 +7,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { Link } from "react-router-dom";
 
 function Communities({ setData }) {
+  const homeButtons = ["my-rays"];
   const dogButtons = [
     "good-puppers",
     "german-shepherds",
@@ -89,8 +90,8 @@ function Communities({ setData }) {
                     }}
                     onMouseEnter={handleHover}
                     onMouseLeave={handleLeave}
-                    onClick={() => console.log("test")}
-                  />
+                    onClick={() => setData(homeButtons)}
+                    />
                 </Link>
               </Col>
             </ButtonGroup>

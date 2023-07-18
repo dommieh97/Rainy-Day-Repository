@@ -50,18 +50,6 @@ function Channels({data}) {
         </div>
 
         {renderButtons}
-        {/* <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
-}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>yummmmm</strong></button>
-      <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
-}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>ramennnnnn</strong></button>
-      <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
-}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>italiano</strong></button>
-      <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
-}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>voigan</strong></button>
-      <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
-}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>bread...</strong></button>
-      <button style={{visibility: channels ? 'visible' : 'hidden',transition:"visibility 0s"
-}} className="chanBttn"><strong><strong style={{fontSize:'16px',paddingRight:'7.5px'}}>#</strong>is-that-even-edible</strong></button> */}
       </Stack>
     </div>
   );

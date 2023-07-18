@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import NatureBody from './NatureBody'
-import NatureChannels from './NatureChannels'
+
+const natureAPI = "https://meme-api.com/gimme/natureporn/50";
 
 function Nature()
 {
+const [nature,setFood] = useState([])
+useEffect(() => 
+{
+    fetch(natureAPI)
+    .then(r => r.json())
+    .then(data => setFood(data.memes))
+}, []); 
     return (
         <div>
-            <NatureBody />
-            <NatureChannels />
+            <NatureBody nature={nature} />
         </div>
     )
 }

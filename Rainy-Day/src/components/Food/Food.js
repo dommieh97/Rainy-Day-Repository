@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import FoodBody from './FoodBody'
-import FoodChannels from './FoodChannels'
+
+const foodAPI = "https://meme-api.com/gimme/FoodPorn/50";
 
 function Food()
 {
+const [food,setFood] = useState([])
+useEffect(() => 
+{
+    fetch(foodAPI)
+    .then(r => r.json())
+    .then(data => setFood(data.memes))
+}, []); 
     return (
         <div>
-            <FoodBody />
-            <FoodChannels />
+            <FoodBody food={food}/>
         </div>
     )
 }

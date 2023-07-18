@@ -1,13 +1,20 @@
-import React from 'react'
+import React,{useState,useEffect}from 'react'
 import BeachBody from './BeachBody'
-import BeachChannels from './BeachChannels'
+
+const beachAPI = "https://meme-api.com/gimme/BeachPorn/50";
 
 function Beach()
 {
+const [beach,setBeach] = useState([])
+useEffect(() => 
+{
+    fetch(beachAPI)
+    .then(r => r.json())
+    .then(data => setBeach(data.memes))
+}, []); 
     return (
         <div>
-            <BeachBody />
-            <BeachChannels />
+            <BeachBody beach={beach} />
         </div>
     )
 }
