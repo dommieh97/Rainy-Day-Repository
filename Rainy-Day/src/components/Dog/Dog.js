@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import DogBody from './DogBody'
+import MyContext from '../MyContext';
 
 const dogAPI = "https://meme-api.com/gimme/dogpictures/50";
 

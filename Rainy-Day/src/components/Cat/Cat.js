@@ -5,6 +5,7 @@ const catAPI = "https://meme-api.com/gimme/catpictures/50";
 
 function Cat()
 {
+
 const [cat,setCat] = useState([])
 useEffect(() => 
 {

@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Cards from "../Cards";
+import MyContext from "../MyContext";
+import { useLocation } from "react-router-dom";
 
 function VGBody({vg})
 {
-
+const location = useLocation();
+const { setFirstEndPoint } = React.useContext(MyContext);
+     
+useEffect(() => {
+    setFirstEndPoint(location.pathname);
+    });
 
 const allVG = vg.map((vg) => <Cards community={vg} key={vg.postLink} />);
 return(

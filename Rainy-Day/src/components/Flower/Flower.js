@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import FlowerBody from './FlowerBody'
+import MyContext from '../MyContext';
 
 const flowerApi = "https://meme-api.com/gimme/flowerporn/50";
 

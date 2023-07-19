@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Cards from "../Cards";
+import MyContext from "../MyContext";
+import { useLocation } from "react-router-dom";
 
 function DessertBody({dessert})
 {
-
+const location = useLocation();
+const { setFirstEndPoint } = React.useContext(MyContext);
+     
+useEffect(() => {
+    setFirstEndPoint(location.pathname);
+    });
 
 const allDessert = dessert.map((dessert) => <Cards community={dessert} key={dessert.postLink} />);
 return(

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NatureBody from './NatureBody'
+import MyContext from '../MyContext';
 
 const natureAPI = "https://meme-api.com/gimme/natureporn/50";
 

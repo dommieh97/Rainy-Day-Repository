@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Cards from "../Cards";
+import MyContext from "../MyContext";
+import { useLocation } from "react-router-dom";
+
 function FoodBody({food})
 {
-
+const location = useLocation();
+const { setFirstEndPoint } = React.useContext(MyContext);
+     
+useEffect(() => {
+    setFirstEndPoint(location.pathname);
+    });
 
 const allFood = food.map((food) => <Cards community={food} key={food.postLink} />);
 

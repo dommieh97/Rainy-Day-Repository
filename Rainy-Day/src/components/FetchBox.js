@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import App from "./App";
 import MyContext from "./MyContext";
 import { Routes, Route } from "react-router-dom";
@@ -16,14 +16,15 @@ import Communities from "./Communities";
 import Channels from "./Channels";
 import Ray from "./Home/Ray";
 import VG from "./Video-Game/VG";
-
+import CardDisplay from "./CardDisplay";
 
 
 function FetchBox() {
-
+const [displayData, setDisplayData] = useState({});
+const [firstEndPoint,setFirstEndPoint] = useState("");
   return (
     <MyContext.Provider
-      value={{}}
+      value={{displayData, setDisplayData, setFirstEndPoint, firstEndPoint}}
     >
       <Routes>
         <Route
@@ -37,7 +38,17 @@ function FetchBox() {
           }
         >
           <Route path="/" element={<Ray/>} />
+          {/* {apiData.map((post) => {
+            return (
+              <Route
+                key={post.postLink}
+                path={`${firstEndPoint}/${post.author}`}
+                element={<CardDisplay data={post} />}
+              />
+            );
+          })} */}
           <Route path="/Dog" element={<Dog />} />
+          <Route path={`${firstEndPoint}/:title`} element={<CardDisplay/>} />
           <Route path="/Cat" element={<Cat />} />
           <Route path="/Dessert" element={<Dessert />} />
           <Route path="/Food" element={<Food />} />

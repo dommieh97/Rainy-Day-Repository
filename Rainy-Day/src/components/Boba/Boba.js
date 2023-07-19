@@ -5,6 +5,7 @@ const bobaAPI = "https://meme-api.com/gimme/boba/50";
 
 function Boba()
 {
+
 const [boba,setBoba] = useState([])
 useEffect(() => 
 {

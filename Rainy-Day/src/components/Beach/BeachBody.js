@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Cards from "../Cards";
+import MyContext from "../MyContext";
+import { useLocation } from "react-router-dom";
+
 function BeachBody({beach})
 {
+const location = useLocation();
+const { setFirstEndPoint } = React.useContext(MyContext);
 
-
+useEffect(() => {
+    setFirstEndPoint(location.pathname);
+  });
+  
 const allBeaches = beach.map((beach) => <Cards community={beach} key={beach.postLink} />);
 return(
     <div className="scrollbar" id="style-2">
