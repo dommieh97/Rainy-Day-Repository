@@ -37,7 +37,7 @@ const [firstEndPoint,setFirstEndPoint] = useState("");
             </App>
           }
         >
-          <Route path="/" element={<Ray/>} />
+          <Route path="/Home" element={<Ray/>} />
           {/* {apiData.map((post) => {
             return (
               <Route

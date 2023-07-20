@@ -1,10 +1,44 @@
 import React, { useContext } from "react";
 import Card from "react-bootstrap/Card";
 import MyContext from "./MyContext";
+import Button from "react-bootstrap/Button";
+import Form from 'react-bootstrap/Form';
 
 function CardDisplay() {
   const {displayData} = useContext(MyContext);
   const { url, author, postLink, title } = displayData;
+
+function fetchData() {
+
+const rayData = {
+      postLink: displayData.postLink,
+      subreddit: displayData.subreddit,
+      title: displayData.title,
+      url: displayData.url,
+      nsfw: displayData.nsfw,
+      spoiler: displayData.spoiler,
+      author: displayData.author,
+      ups: displayData.ups,
+    };
+
+fetch("http://localhost:4000/rays", 
+{
+  method: "POST",
+  headers: 
+  {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(rayData),
+})
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Fetched data:", data);
+      })
+      .catch((error) => {
+        console.error("Error fetching rays:", error);
+      });
+  }
+
   return (
     <div
       className="card-display"
@@ -15,6 +49,7 @@ function CardDisplay() {
         margin: "40px",
         marginTop: "20px",
         borderRadius: "15px",
+        position: 'relative'
       }}
     >
       <Card className="card-display" style={{ display: "flex" }}>
@@ -29,9 +64,9 @@ function CardDisplay() {
           className="card-display-body"
           style={{
             width: "100%",
-            border: "solid",
+            border: "none",
             borderColor: "red",
-            textAlign: "center",
+            textAlign: "left",
             backgroundColor: "rgb(230,230,230)",
           }}
         >
@@ -40,43 +75,50 @@ function CardDisplay() {
               href={postLink}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ float: "left", marginLeft: "10px" }}
+              style={{ float: "left", marginLeft: "25px" }}
             >
-              Link to reddit post
+              Original Post
             </a>
             {true ? (
-              <p
-                style={{
-                  padding: "1px",
-                  borderRadius: "5px",
-                  backgroundColor: "red",
-                  color: "black",
-                  display: "inline",
-                  float: "right",
-                  paddingRight: "5px",
-                  paddingLeft: "5px",
-                  marginRight: "10px",
-                }}
-              >
-                NSFW
-              </p>
+              <Button
+              size="lg"
+              variant="danger"
+              style={{
+                position: "relative",
+                top: "",
+                left: "420px",
+                borderRadius: "50%",
+              }}
+              onClick={fetchData}
+            >
+              ♥
+            </Button>
             ) : null}
           </div>
           <h1
               style={{
-                border: "solid",
+                border: "none",
                 borderColor: "blue",
                 marginTop: "55px",
+                textAlign: "left",
+                marginLeft: "25px"
               }}
             >
              {title}
             </h1>
-             <h5>{author}</h5>
-            <p style={{ border: "solid", borderColor: "red" }}>
+            <a style={{ textAlign: "left",marginLeft: "25px",fontSize:"20px",cursor:"pointer",color:'black'}} target="_blank" rel="noopener noreferrer" href={`https://www.reddit.com/user/${author}/`}><strong>{author}</strong></a>
+            <p style={{ border: "none", borderColor: "red",textAlign: "left",marginLeft: "25px"}}>
               Summary bommary bmmary bodmmary bodmmary bodmmary bodmmary
               bodmmary bodmmary bodmmary bododmmary bodmmary bodmmary boddy
             </p>
-            <div style={{marginBottom: "50px", border:"solid"}}>comment section</div>
+            <div style={{textAlign:'left',marginBottom: "50px", border:"none",marginLeft: "25px",fontSize:"20px"}}><strong>Comments</strong></div>
+            <div style={{position:"relative", top:"400px", left: '170px' }}> 
+              <Form style={{position:'absolute'}}>
+                <Form.Control type="text" placeholder="Commento Plox" style={{width:'240px',position:"absolute", textAlign:"center",right:"420px"}}/>
+                <Button variant="danger" style={{position:"absolute", right:'305px'}}>Add Comment</Button>
+              </Form>
+
+            </div>
         </Card.Body>
       </Card>
     </div>

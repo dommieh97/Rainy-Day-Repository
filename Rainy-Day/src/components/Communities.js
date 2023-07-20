@@ -76,7 +76,7 @@ function Communities({ setData }) {
 
             <ButtonGroup size="sm">
               <Col xs={6} md={4}>
-                <Link to="/">
+                <Link to="/Home">
                   <Image
                     alt="myHub"
                     src="https://cdn-icons-png.flaticon.com/128/6723/6723246.png"
