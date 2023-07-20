@@ -1,10 +1,10 @@
-import React,{useEffect,useState} from 'react';
+import React,{useContext, useEffect,useState} from 'react';
 import RayBody from './RayBody';
 import MyContext from '../MyContext';
 
 function Ray ()
 {
-const [ray,setRay] = useState([])
+    const {setRay, ray} = useContext(MyContext);
 
 useEffect(() => 
 {

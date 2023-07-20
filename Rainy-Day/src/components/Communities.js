@@ -14,7 +14,7 @@ function Communities({ setData }) {
     "corgis",
     "weeeenies",
     "alaskan-huskers",
-    "golden-retrievers",
+    "Dogs-With-Hats",
   ];
   const catButtons = [
     "good-kitties",

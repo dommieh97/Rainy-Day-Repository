@@ -3,6 +3,7 @@ import App from "./App";
 import MyContext from "./MyContext";
 import { Routes, Route } from "react-router-dom";
 import TopThing from "./TopThing";
+import DogBody from "./Dog/DogBody";
 import Dog from "./Dog/Dog";
 import Cat from "./Cat/Cat";
 import Boba from "./Boba/Boba";
@@ -17,14 +18,20 @@ import Channels from "./Channels";
 import Ray from "./Home/Ray";
 import VG from "./Video-Game/VG";
 import CardDisplay from "./CardDisplay";
+import GS from './Dog/GS';
+import Corgis from './Dog/Corgis';
+import DWH from './Dog/DWH';
+import HotDog from './Dog/HotDog';
+import Husky from './Dog/Husky';
 
 
 function FetchBox() {
+  const [ray, setRay] = useState([]);
 const [displayData, setDisplayData] = useState({});
 const [firstEndPoint,setFirstEndPoint] = useState("");
   return (
     <MyContext.Provider
-      value={{displayData, setDisplayData, setFirstEndPoint, firstEndPoint}}
+      value={{displayData, setDisplayData, setFirstEndPoint, firstEndPoint, ray, setRay}}
     >
       <Routes>
         <Route
@@ -47,7 +54,14 @@ const [firstEndPoint,setFirstEndPoint] = useState("");
               />
             );
           })} */}
-          <Route path="/Dog" element={<Dog />} />
+          <Route path="/Dog" element={<Dog />}>
+          <Route path="/Dog/good-puppers" element={<DogBody />} />
+          <Route path="/Dog/german-shepherds" element={<GS />} />
+          <Route path="/Dog/corgis" element={<Corgis />} />
+          <Route path="/Dog/weeeenies" element={<HotDog />} />
+          <Route path="/Dog/alaskan-huskers" element={<Husky />} />
+          <Route path="/Dog/Dogs-With-Hats" element={<DWH />} />
+          </Route>
           <Route path={`${firstEndPoint}/:title`} element={<CardDisplay/>} />
           <Route path="/Cat" element={<Cat />} />
           <Route path="/Dessert" element={<Dessert />} />
