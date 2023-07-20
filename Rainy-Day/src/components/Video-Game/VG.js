@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import VGBody from './VGBody'
-import MyContext from '../MyContext';
 
 const vidgAPI = "https://meme-api.com/gimme/gamecollecting/50";
 

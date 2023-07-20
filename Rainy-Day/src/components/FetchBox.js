@@ -55,12 +55,12 @@ const [firstEndPoint,setFirstEndPoint] = useState("");
             );
           })} */}
           <Route path="/Dog" element={<Dog />}>
-          <Route path="/Dog/good-puppers" element={<DogBody />} />
-          <Route path="/Dog/german-shepherds" element={<GS />} />
-          <Route path="/Dog/corgis" element={<Corgis />} />
-          <Route path="/Dog/weeeenies" element={<HotDog />} />
-          <Route path="/Dog/alaskan-huskers" element={<Husky />} />
-          <Route path="/Dog/Dogs-With-Hats" element={<DWH />} />
+            <Route path="/Dog/good-puppers" element={<DogBody />} />
+            <Route path="/Dog/german-shepherds" element={<GS />} />
+            <Route path="/Dog/corgis" element={<Corgis />} />
+            <Route path="/Dog/weeeenies" element={<HotDog />} />
+            <Route path="/Dog/alaskan-huskers" element={<Husky />} />
+            <Route path="/Dog/Dogs-With-Hats" element={<DWH />} />
           </Route>
           <Route path={`${firstEndPoint}/:title`} element={<CardDisplay/>} />
           <Route path="/Cat" element={<Cat />} />

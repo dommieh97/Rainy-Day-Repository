@@ -1,4 +1,4 @@
-import React,{useContext, useEffect,useState} from 'react';
+import React,{useContext, useEffect} from 'react';
 import RayBody from './RayBody';
 import MyContext from '../MyContext';
 
@@ -11,7 +11,7 @@ useEffect(() =>
     fetch('http://localhost:4000/rays')
     .then(r => r.json())
     .then(setRay)
-}, []); 
+}); 
 
  return(<RayBody ray={ray}/>)
  

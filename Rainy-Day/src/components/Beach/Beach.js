@@ -1,12 +1,10 @@
-import React,{useState,useEffect,useContext}from 'react'
+import React,{useState,useEffect}from 'react'
 import BeachBody from './BeachBody'
-import MyContext from '../MyContext';
 const beachAPI = "https://meme-api.com/gimme/BeachPorn/50";
 
 function Beach()
 {
 
-const {setApiData} = useContext(MyContext);
 const [beach,setBeach] = useState([])
 useEffect(() => 
 {

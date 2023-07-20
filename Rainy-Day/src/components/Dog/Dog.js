@@ -9,11 +9,11 @@ import Husky from './Husky';
 
 const endpoints = [
   "good-puppers",
-  "german-shepherds",
-  "corgis",
-  "weeeenies",
-  "alaskan-huskers",
-  "Dogs-With-Hats",
+  "Dog/german-shepherds",
+  "Dog/corgis",
+  "Dog/weeeenies",
+  "Dog/alaskan-huskers",
+  "Dog/Dogs-With-Hats",
 ];
 
 const dogAPI = "https://meme-api.com/gimme/";
@@ -35,32 +35,32 @@ function Dog() {
       setter(data.memes);
     };
 
-    // Extract endpoint from location.pathname
-    const endpoint = location.slice(1); // Use the last part of the path as the endpoint
+  const endpoint = location.slice(1); 
   const validEndpoint = endpoints.includes(endpoint) ? endpoint : "good-puppers";
 
     switch (validEndpoint) {
-      case 'german-shepherds':
+      case 'Dog/german-shepherds':
         getMemes('germanshepherds', setGS);
         break;
-      case 'corgis':
+      case 'Dog/corgis':
         getMemes('corgis', setCorgi);
         break;
-      case 'weeeenies':
+      case 'Dog/weeeenies':
         getMemes('daschund', setHD);
         break;
-      case 'alaskan-huskers':
+      case 'Dog/alaskan-huskers':
         getMemes('husky', setHusky);
         break;
-      case 'Dogs-With-Hats':
+      case 'Dog/Dogs-With-Hats':
         getMemes('dogswearinghats', setDogHat);
         break;
       default:
-        // For the default case, fetch "good-puppers"
         getMemes('dogpictures', setDog);
         break;
     }
-  }, [location]); // Trigger the effect whenever the location changes
+    console.log(validEndpoint)
+
+  }, [location]); 
 
   return (
     <>

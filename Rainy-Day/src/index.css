@@ -125,7 +125,14 @@ color: white;
 #message:hover  {
 opacity:100%;
 }
-
+.chanBttn:hover {
+  color: #dbdee1;
+  background-color: gray;   
+} 
+.chanBttn:focus {
+background-color: gray;
+color:#36373d;  
+} 
 #avatar {
   border-radius: 50%;
   margin-left: 50px;
@@ -153,7 +160,26 @@ opacity:100%;
   min-width: 400px;
   box-shadow: 2px 0px 11px white;
 }
+.comment-div{
+  /* max-width:400px; */
+  max-width: 80%;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 
+.comment-input{
+  position: relative;
+  text-align: center;
+}
+
+.add-comment-button{
+  position:relative;
+  float:right;
+
+}
 #photos {
   /* Prevent vertical gaps */
   line-height: 0;
@@ -190,8 +216,8 @@ opacity:100%;
     flex-direction: column;
     margin: auto;
     margin-top: 20px;
-
     max-width: 600px;
+    
   }
   .card-display-image {
     border-top-right-radius: 15px;
@@ -203,6 +229,7 @@ opacity:100%;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 15px;
     box-shadow: 0px 2px 11px white;
+    min-height:400px;
   }
 }
 @media (max-width: 800px) {

@@ -13,7 +13,7 @@ function CardDisplay() {
     ray.forEach((post) => {
       if (post.title === title) setLiked(true);
     });
-  }, []);
+  });
 
   function deleteData(object) {
     setLiked(false)
@@ -183,7 +183,7 @@ function CardDisplay() {
             }}
           >
             <strong>Comments</strong>
-            <div>asdasd</div>
+            <div>Wow -insert very cool thing here- is so cool!!!!</div>
           </div>
           <div className="comment-div">
             <Form style={{ position: "relative", display: "flex" }}>

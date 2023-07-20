@@ -7,13 +7,13 @@ import MyContext from "./MyContext";
 function Cards(props) {
   const { firstEndPoint, setDisplayData, ray } = React.useContext(MyContext);
   const [liked, setLiked] = useState(false);
-  const { author, url, title } = props.community;
+  const { author, url } = props.community;
   const [isHovered, setIsHovered] = useState(false);
   useEffect(() => {
     ray.forEach((post) => {
       if (post.title === props.community.title) setLiked(true);
     });
-  }, []);
+  });
 
   function deleteData(object) {
     setLiked(false)

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import DessertBody from './DessertBody'
-import MyContext from '../MyContext';
 
 const dessertAPI = "https://meme-api.com/gimme/DessertPorn/50";
 
