@@ -1,13 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import Cards from "../Cards";
 import MyContext from "../MyContext";
 import { useLocation } from "react-router-dom";
 
-function Husky({husky})
+function Husky()
 {
+const [husky, setHusky] = useState([]);
 const location = useLocation();
 const { setFirstEndPoint } = React.useContext(MyContext);
-     
+
+useEffect(() => 
+{
+    fetch("https://meme-api.com/gimme/husky/50")
+    .then(r => r.json())
+    .then(data => setHusky(data.memes))
+}, []); 
+
 useEffect(() => {
     setFirstEndPoint(location.pathname);
 });

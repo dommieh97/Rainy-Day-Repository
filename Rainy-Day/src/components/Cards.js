@@ -129,7 +129,7 @@ function Cards(props) {
           }}
           onClick={() => deleteData(props.community)}
         >
-          👎
+          🖤
         </Button>
       ) : (
         <Button

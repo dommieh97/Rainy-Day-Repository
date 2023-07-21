@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 function Communities({ setData }) {
   const homeButtons = ["my-rays"];
   const dogButtons = [
+    "/Dog",
     "good-puppers",
     "german-shepherds",
     "corgis",
@@ -17,16 +18,26 @@ function Communities({ setData }) {
     "Dogs-With-Hats",
   ];
   const catButtons = [
+    "/Cat",
     "good-kitties",
     "shorthairs",
     "persians",
     "baldies",
     "siameses",
     "scottish-fold",
+    "cats-standing"
   ];
-  const beachButtons = ["beach", "water"];
-  const bobaButtons = ["boba", "thai-tea"];
+  const beachButtons = [
+    "/Beach",
+    "beach", 
+    "underwater-funsies",
+    "surfs-up-not-the-movie",
+    "toitles",
+    "mr-krabs",
+    "shoiks"];
+  const bobaButtons = ["/Boba","boba", "not-boba-tea"];
   const foodButtons = [
+    "/Food",
     "food", 
     "italiano",
     'ramennnnnn',
@@ -34,9 +45,23 @@ function Communities({ setData }) {
     "voigan",
     "is-that-even-edible"
 ];
-  const natureButtons = ["nature", "wild"];
-  const vgButtons = ["games", "nice games"];
+  const natureButtons = [
+    "/Nature"
+    ,"nature"
+    , "birbs"
+    ,"buggies"
+    ,"mushies"];
+  const vgButtons = [
+    "/Video-Games",
+    "games", 
+    "genshin-impact",
+    "league",
+    "pokemon",
+    "honkai",
+    "animal-crossing",
+    "persona"];
   const dessertButtons = [
+    "/Dessert",
     "desserts", 
     "smol-cake",
     "cake-dress-up",
@@ -44,7 +69,14 @@ function Communities({ setData }) {
     "ma-macarons",
     "sfw-pies-only"  
 ];
-  const flowerButtons = ["flowers", "roses"];
+  const flowerButtons = [
+    "/Flower",
+    "flowers", 
+    "rosies",
+    "sunny",
+    "orcheed",
+    "hydrpanges",
+    "chibiscus"];
 
   function handleHover(e) {
     e.target.style.borderRadius = "25%";

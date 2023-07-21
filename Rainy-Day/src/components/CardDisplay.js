@@ -116,7 +116,7 @@ function CardDisplay() {
                 }}
                 onClick={()=>deleteData(displayData)}
               >
-                👎
+                🖤
               </Button>
             )  : (
               <Button

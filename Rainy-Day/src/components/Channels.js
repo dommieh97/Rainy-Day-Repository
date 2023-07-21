@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom"; // Import Link from React Router
+import { Link} from "react-router-dom"; 
 
 import Stack from "react-bootstrap/Stack";
 
 function Channels({ data }) {
   const [channels, setChannels] = useState(true);
-  const location = useLocation().pathname;
-console.log(data)
-  const renderButtons = data.map((data) => {
+  const location = data[0]
+
+  const renderButtons = data
+  .slice(1)
+  .map((data) => {
     return (
-      <Link to={`http://localhost:3000${location}/${data}`}> 
+      <Link to={`http://localhost:3000${location}/${data}`} replace={true} > 
         <button
           style={{
             visibility: channels ? "visible" : "hidden",

@@ -1,13 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import Cards from "../Cards";
 import MyContext from "../MyContext";
 import { useLocation } from "react-router-dom";
 
-function Corgis({corgi})
+function Corgis()
 {
 const location = useLocation();
 const { setFirstEndPoint } = React.useContext(MyContext);
-     
+const [corgi, setCorgi] = useState([]);
+
+useEffect(() => 
+{
+    fetch("https://meme-api.com/gimme/corgis/50")
+    .then(r => r.json())
+    .then(data => setCorgi(data.memes))
+}, []); 
+
 useEffect(() => {
     setFirstEndPoint(location.pathname);
 });

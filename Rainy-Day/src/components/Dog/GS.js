@@ -1,13 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import Cards from "../Cards";
 import MyContext from "../MyContext";
 import { useLocation } from "react-router-dom";
 
-function GS({gS})
+function GS()
 {
+    
+const [gS, setGS] = useState([]);
 const location = useLocation();
 const { setFirstEndPoint } = React.useContext(MyContext);
-     
+    
+useEffect(() => 
+{
+    fetch("https://meme-api.com/gimme/germanshepherds/50")
+    .then(r => r.json())
+    .then(data => setGS(data.memes))
+}, []); 
+
 useEffect(() => {
     setFirstEndPoint(location.pathname);
 });

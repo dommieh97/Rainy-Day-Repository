@@ -1,12 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import Cards from "../Cards";
 import MyContext from "../MyContext";
 import { useLocation } from "react-router-dom";
 
-function DWH({dogHat})
+function DWH()
 {
 const location = useLocation();
 const { setFirstEndPoint } = React.useContext(MyContext);
+
+const [dogHat, setDogHat] = useState([]);
+
+useEffect(() => 
+{
+    fetch("https://meme-api.com/gimme/dogswearinghats/50")
+    .then(r => r.json())
+    .then(data => setDogHat(data.memes))
+}, []); 
+
 useEffect(() => {
     setFirstEndPoint(location.pathname);
 });
